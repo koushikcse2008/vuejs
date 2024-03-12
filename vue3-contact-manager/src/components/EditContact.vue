@@ -47,14 +47,17 @@ import { createToast } from 'mosha-vue-toastify';
 import 'mosha-vue-toastify/dist/style.css';
 
 export default {
-    name: "EditContactView",
+    name: "EditContact",
+    props: {
+        id: Number,
+    },
     date() {
         return {
-            currentContact: null
+            currentContact: {}
         }
     },   
-    created() {
-            this.getContact(this.$route.params.id);
+    mounted() {
+        this.getContact(this.$route.params.id);
     }, 
     methods: {
         getContact(id) {

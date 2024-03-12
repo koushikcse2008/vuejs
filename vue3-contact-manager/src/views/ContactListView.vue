@@ -16,7 +16,7 @@
     <tbody className="bg-light">
         <tr v-for="contact in contacts" :key="contact.id">
             <th scope="row" className="text-center">{{contact.id}}</th>
-            <td>{{ contact.name }}</td>
+            <td>{{ contact.cname }}</td>
             <td>{{ contact.email }}</td>
             <td>{{ contact.address }}</td>
             <td>{{ contact.landline }}</td>
@@ -35,6 +35,7 @@
 import axios from 'axios';
 import { createToast } from 'mosha-vue-toastify';
 import 'mosha-vue-toastify/dist/style.css';
+import Swal from 'sweetalert2';
 
 export default {
     name: "ContactList",
@@ -54,9 +55,30 @@ export default {
                  .catch((error) => console.log(error));
         },
         handleDelete(id) {
-            axios.delete(`http://localhost:3000/contacts/${id}`).then(() => {
-                this.getContacts();
-            });
+            
+            Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+
+                axios.delete(`http://localhost:3000/contacts/${id}`).then(() => {
+                    this.getContacts();
+                });
+
+              Swal.fire(
+                'Deleted!',
+                'Your contact has been deleted.',
+                'success'
+              );
+              
+            }
+          });
         }
     }
 }

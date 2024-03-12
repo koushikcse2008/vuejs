@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <p> &nbsp; </p>
+  <p> &nbsp; {{ multiple(50) }} </p>
   <HelloWorld msg="Hello World!!"/>
 </template>
 
@@ -9,8 +9,18 @@ import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      baseValue: 10
+    }
+  },
   components: {
     HelloWorld
+  },
+  methods: {
+    multiple(num) {
+      return num*this.baseValue
+    }
   }
 }
 </script>
