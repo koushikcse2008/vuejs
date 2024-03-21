@@ -1,0 +1,20 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "cname": "John Doe",
+      "email": "john.doe1@email.com",
+      "address": "Kolkata",
+      "landline": "03325222898",
+      "mobile": "9876543210"
+    },
+    {
+      "id": "2",
+      "cname": "John Smith",
+      "email": "john.smith@email.com",
+      "address": "Kolkata",
+      "landline": "03325222898",
+      "mobile": "9876543210"
+    }
+  ]
+}
