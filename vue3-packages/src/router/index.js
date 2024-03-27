@@ -43,6 +43,13 @@ const routes = [
     }
   }, 
   {
+    path: '/json-server',
+    name: 'JsonServer',
+    component: function () {
+      return import('../views/JsonServer.vue')
+    }
+  }, 
+  {
     path: '/metatitle',
     name: 'MetaTitle',
     component: function () {

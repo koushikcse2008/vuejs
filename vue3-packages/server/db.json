@@ -1,0 +1,16 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Demo Posrt Title 1",
+            "desc": "Demo post details 1",
+            "posted_on": "2024-03-24"
+        },
+        {
+            "id": 2,
+            "title": "Demo Posrt Title 2",
+            "desc": "Demo post details 2",
+            "posted_on": "2024-03-24"
+        }
+    ] 
+}

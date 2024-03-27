@@ -26,6 +26,9 @@
             <router-link to="/jquery" class="nav-link">Jquery</router-link>
         </li>
         <li class="nav-item">
+            <router-link to="/json-server" class="nav-link">Json Server</router-link>
+        </li>
+        <li class="nav-item">
             <router-link to="/metatitle" class="nav-link">Meta Title</router-link>
         </li>  
         <li class="nav-item">
