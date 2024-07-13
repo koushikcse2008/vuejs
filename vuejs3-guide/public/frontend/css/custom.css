@@ -1,0 +1,10 @@
+.bg-success, .btn-success { background-color: #3FB27F !important }
+.bg-danger, .btn-danger { background-color: #33475B !important; }
+
+xmp { margin-top: -40px !important; }
+div.list-group a.active, div.list-group a:hover { color: white !important; background-color: #007bff !important; }
+
+h3.btn { width: 100% !important; text-align: left; font-weight: bold; }
+h3.text-danger { padding-bottom: 10px !important; }
+
+
